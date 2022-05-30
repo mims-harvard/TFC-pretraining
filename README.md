@@ -59,7 +59,9 @@ A table summarizing the statistics of all these eight datasets can be found in *
 
 
 ### Processed data
+For details on data-preprocessing, please refer to our paper. But we will explain our procedure and highlight some steps here for clarity. Our data-processing consists of two stages. First, we segmented time series recordings if they are too long, and we split the dataset (mainly, it's the fine-tuning sets) into train, validation, and test portions. We took care to assign all samples belong to a single recording to one partition only whenever that is possible, to avoid leaking data from the test set into the training set, but for pre-processed datasets like Epilepsy this is not possible. The train : val ratio is at about 3 : 1 and we used balanced number of samples for each class whenever possible. All remaining samples not included in the train and validation partitions are used in the test partition to better estimate the performance metrics of the models. After the first stage, we produced three .pt (pytorch format) files corresponding to the three partitions for each dataset. Each file contains a dictionary with keys of `samples` and `labels` and corresponding values of torch tensors storing the data, respectively. For samples the tensor dimensions correspond to the number of samples, number of channels, and, finally, length of each time series sample. This is the standard format that can be directly read in by the TS-TCC model as well as our TF-C implementation. These preprocessed datasets can be conveniently downloaded from (????) or viaa script (???) into the datasets folder in this repo. 
 
+The second step consists of converting, for each dataset, from the three .pt files, to the accepted input format for each of the baseline models and place them in correct directories relative to the script that handles the pre-training and fine-tuning process. We have prepared simple scripts for these straightforward tasks but did not automate them. To further reduce the clutter of files in the repo, we have chosen to omit them from the baseline folders. Also, note that in the second experiment of one-to-many pre-training, the fine-tuning datasets are further clipped to have the same length as the sleepEDF dataset. The pre-processing scripts are available upon reasonable request.
 
 
 ## Requirements
@@ -71,10 +73,7 @@ For the baselines, unfortunately, we have not managed to unify the environments,
 `conda env create -f XXX_requirements.yml `
 
 ## Running the code
-
-#### Examples
-
-
+You are advised to run the models from the corresponding folders under `code/baselines/` using the command-line patterns described by the original authors' `README  .md` files whenever possible. We note that in the case of Mixing-up and SimCLR, pre-training and fine-tuning are done by directly running `train_model.py` and `fin  etune_model.py` without passing in arguments. Similarly, for CLOCS, one must manually modify the hyperparameters to the training procedure inside the main file (  `run_experiments.py` in this case). Please reach out to the original authors of these baselines if you have any questions about setting these hyperparameters in their models. Finally, for each baseline, on different pairs of datasets, the performance of transfer learning can vary depending on the hyperparameter choices. We have manually experimented with them and chose the combinations that gave the best performance while keeping the model complexity of different baselines comparable.   We include tables describing the specific combinations of hyperparameters we used for different datasets whenever necessary, in the corresponding folder for the different baselines so that reproducing our result is made possible.
 
 ## Citation
 
@@ -84,7 +83,7 @@ If you find *TF-C* useful for your research, please consider citing this paper:
 ```
 @inproceedings{??,
 Title = {Self-Supervised Contrastive Pre-Training For Time Series via Time-Frequency Consistency},
-author = {Zhang, Xiang and Ziyuan, Zhao and Tsiligkaridis, Theodoros and Zitnik, Marinka},
+author = {??},
 booktitle = {arxiv??},
 year      = {2022}
 }
