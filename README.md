@@ -77,7 +77,7 @@ For the baselines, unfortunately, we have not managed to unify the environments,
 
 You are advised to run the models from the corresponding folders under `code/baselines/` using the command-line patterns described by the original authors' `README  .md` files whenever possible. We note that in the case of Mixing-up and SimCLR, pre-training and fine-tuning are done by directly running `train_model.py` and `fin  etune_model.py` without passing in arguments. Similarly, for CLOCS, one must manually modify the hyperparameters to the training procedure inside the main file (  `run_experiments.py` in this case). Please reach out to the original authors of these baselines if you have any questions about setting these hyperparameters in their models. Finally, for each baseline, on different pairs of datasets, the performance of transfer learning can vary depending on the hyperparameter choices. We have manually experimented with them and chose the combinations that gave the best performance while keeping the model complexity of different baselines comparable.   We include tables describing the specific combinations of hyperparameters we used for different datasets whenever necessary, in the corresponding folder for the different baselines so that reproducing our result is made possible.
 
-## Citation
+<!-- ## Citation
 
 If you find *TF-C* useful for your research, please consider citing this paper:
 
@@ -94,7 +94,7 @@ year      = {2022}
 
 ## Miscellaneous
 
-Please send any questions you might have about the code and/or the algorithm to <xiang_zhang@hms.harvard.edu>. Alternatively, you can open an issue under the current repo and we will be notified.
+Please send any questions you might have about the code and/or the algorithm to <xiang_zhang@hms.harvard.edu>. Alternatively, you can open an issue under the current repo and we will be notified. -->
 
 ## License
 
