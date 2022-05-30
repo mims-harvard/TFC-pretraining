@@ -4,16 +4,16 @@
 
 ## Overview 
 
-This repository contains processed datasets and implementation code for manuscript *# Self-Supervised Contrastive Pre-Training For Time Series via Time-Frequency Consistency*. We propose TF-C, a novel framework for learning generalizable features that can be transferred across different time-series data domains. We evaluate TF-C on eight time series datasets with different sensor measurements and semantic meanings in four diverse, real-world application scenarios. Please consult our paper (link) for more details about our model and the experiments.
+This repository contains processed datasets and implementation code for manuscript *Self-Supervised Contrastive Pre-Training For Time Series via Time-Frequency Consistency*. We propose TF-C, a novel framework for learning generalizable features that can be transferred across different time-series data domains. We evaluate TF-C on eight time series datasets with different sensor measurements and semantic meanings in four diverse, real-world application scenarios. Please consult our paper (link) for more details about our model and the experiments.
 
 
 
-## Key ida of TF-C
+## Key idea of TF-C
 
 Our model is inspired by the well-known Fourier theorem used extensively in signal processing that states the equivalence between time domain and frequency domain representations of a continuous-time signal. We not only devised augmentations for time series in the time domain and in the frequency domain, but our contrastive loss has an additional term that requires the time- and frequency-domain embeddings be close to each other. Inspired by the triplet loss, we further specify that the similarity between the original time-frequency embedding pairs to be smaller than other possible pairs. We believe our model structure combined with the contrastive loss is sufficiently general to introduce inductive bias to the model that drives transfer learning across different time series domains. See the following figure for an illustration of our TF-C approach. Please see our paper for details on the particular choices of encoder and projector networks, model hyperparameters, and component loss function.
 
 <!-- ![TF-C idea] -->
-<!-- (images/fig2.pdf "Idea of Time-Frequency Consistency (TF-C).") -->
+<!-- (images/fig2.pdf"Idea of Time-Frequency Consistency (TF-C).") -->
 
 <p align="center">
     <img src="images/fig2.pdf" width="600" align="center">
@@ -52,13 +52,14 @@ We prepared four pairs of datasets for the four different scenarios that we used
 
 (7). **ECG** is taken as a subset from the 2017 PhysioNet Challenge that focuses on ECG recording classification. The single lead ECG measures four different underlying conditions of cardiac arrhythmias. More specifically, these classes correspond to the recordings of normal sinus rhythm, atrial fibrillation (AF), alternative rhythm, or others (too noisy to be classified). The recordings are sampled at 300 Hz. Furthermore, the dataset is imbalanced, with much fewer samples from the atrial fibrillation and noisy classes out of all four. To preprocess the dataset, we use the code from the CLOCS paper, which applied fixed-length window of 1,500 observations to divide up the long recordings into short samples of 5 seconds in duration that is still physiologically meaningful. The [raw dataset](https://physionet.org/content/challenge-2017/1.0.0/) is distributed under the Open Data Commons Attribution License v1.0.
 
-(8).  Electromyograms (EMG) measures muscle responses as electrical activity to neural stimulation, and they can be use to diagnose certain muscular dystrophies and neuropathies. **EMG** consists of single-channel EMG recording from the tibialis anterior muscle of three volunteers that are healthy, suffering from neuropathy, and suffering from myopathy, respectively. The recordings are sampled with the frequency of 4K Hz. Each patient, i.e., their disorder, is a separate classification category. Then the recordings are split into time series samples using a fixed-length window of 1,500 observations. The [raw dataset](https://physionet.org/content/emgdb/1.0.0/) is distributed under the Open Data Commons Attribution License v1.0.
+(8). Electromyograms (EMG) measures muscle responses as electrical activity to neural stimulation, and they can be use to diagnose certain muscular dystrophies and neuropathies. **EMG** consists of single-channel EMG recording from the tibialis anterior muscle of three volunteers that are healthy, suffering from neuropathy, and suffering from myopathy, respectively. The recordings are sampled with the frequency of 4K Hz. Each patient, i.e., their disorder, is a separate classification category. Then the recordings are split into time series samples using a fixed-length window of 1,500 observations. The [raw dataset](https://physionet.org/content/emgdb/1.0.0/) is distributed under the Open Data Commons Attribution License v1.0.
 
 A table summarizing the statistics of all these eight datasets can be found in **Appendix B** of our paper.
 
 
 
 ### Processed data
+
 For details on data-preprocessing, please refer to our paper. But we will explain our procedure and highlight some steps here for clarity. Our data-processing consists of two stages. First, we segmented time series recordings if they are too long, and we split the dataset (mainly, it's the fine-tuning sets) into train, validation, and test portions. We took care to assign all samples belong to a single recording to one partition only whenever that is possible, to avoid leaking data from the test set into the training set, but for pre-processed datasets like Epilepsy this is not possible. The train : val ratio is at about 3 : 1 and we used balanced number of samples for each class whenever possible. All remaining samples not included in the train and validation partitions are used in the test partition to better estimate the performance metrics of the models. After the first stage, we produced three .pt (pytorch format) files corresponding to the three partitions for each dataset. Each file contains a dictionary with keys of `samples` and `labels` and corresponding values of torch tensors storing the data, respectively. For samples the tensor dimensions correspond to the number of samples, number of channels, and, finally, length of each time series sample. This is the standard format that can be directly read in by the TS-TCC model as well as our TF-C implementation. These preprocessed datasets can be conveniently downloaded from (????) or viaa script (???) into the datasets folder in this repo. 
 
 The second step consists of converting, for each dataset, from the three .pt files, to the accepted input format for each of the baseline models and place them in correct directories relative to the script that handles the pre-training and fine-tuning process. We have prepared simple scripts for these straightforward tasks but did not automate them. To further reduce the clutter of files in the repo, we have chosen to omit them from the baseline folders. Also, note that in the second experiment of one-to-many pre-training, the fine-tuning datasets are further clipped to have the same length as the sleepEEG dataset. The pre-processing scripts are available upon reasonable request.
@@ -73,6 +74,7 @@ For the baselines, unfortunately, we have not managed to unify the environments,
 `conda env create -f XXX_requirements.yml `
 
 ## Running the code
+
 You are advised to run the models from the corresponding folders under `code/baselines/` using the command-line patterns described by the original authors' `README  .md` files whenever possible. We note that in the case of Mixing-up and SimCLR, pre-training and fine-tuning are done by directly running `train_model.py` and `fin  etune_model.py` without passing in arguments. Similarly, for CLOCS, one must manually modify the hyperparameters to the training procedure inside the main file (  `run_experiments.py` in this case). Please reach out to the original authors of these baselines if you have any questions about setting these hyperparameters in their models. Finally, for each baseline, on different pairs of datasets, the performance of transfer learning can vary depending on the hyperparameter choices. We have manually experimented with them and chose the combinations that gave the best performance while keeping the model complexity of different baselines comparable.   We include tables describing the specific combinations of hyperparameters we used for different datasets whenever necessary, in the corresponding folder for the different baselines so that reproducing our result is made possible.
 
 ## Citation
