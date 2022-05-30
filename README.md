@@ -2,16 +2,6 @@
 
 # Self-Supervised Contrastive Pre-Training For Time Series via Time-Frequency Consistency
 
-#### Authors: [Xiang Zhang](http://xiangzhang.info/) (xiang_zhang@hms.harvard.edu), [Ziyuan Zhao](https://github.com/mims-harvard/TFC-pretraining)(ziyuanzhao@college.harvard.edu), 
-
-#### [Theodoros Tsiligkaridis](https://github.com/mims-harvard/TFC-pretraining)(ttsili@ll.mit.edu), [Marinka Zitnik](https://zitniklab.hms.harvard.edu/) (marinka@hms.harvard.edu)
-
-
-
-#### [Project website](https://github.com/mims-harvard/TFC-pretraining)
-
-
-
 ## Overview 
 
 This repository contains processed datasets and implementation code for manuscript *# Self-Supervised Contrastive Pre-Training For Time Series via Time-Frequency Consistency*. We propose TF-C, a novel framework for learning generalizable features that can be transferred across different time-series data domains. We evaluate TF-C on eight time series datasets with different sensor measurements and semantic meanings in four diverse, real-world application scenarios. Please consult our paper (link) for more details about our model and the experiments.
