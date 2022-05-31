@@ -15,10 +15,7 @@ Our model is inspired by the well-known Fourier theorem used extensively in sign
 <!-- ![TF-C idea] -->
 <!-- (images/fig2.pdf"Idea of Time-Frequency Consistency (TF-C).") -->
 
-<p align="center">
-    <img src="[images/fig2.pdf](https://github.com/mims-harvard/TFC-pretraining/blob/main/images/fig2.pdf)" width="600" align="center">
-</p>
-
+![TFC-idea](images/fig2.pdf)
 
 
 
@@ -40,13 +37,13 @@ We prepared four pairs of datasets for the four different scenarios that we used
 
 ### Raw data
 
-(1). **SleepEDF** contains 153 whole-night sleeping Electroencephalography (EEG) recordings that monitored by sleep cassette. The data is collected from 82 healthy subjects. The 1-lead EEG signal is sampled at 100 Hz. We segment the EEG signals into segments (window size is 200) without overlapping and each segment forms a sample. Every sample is associated with one of the five sleeping patterns/stages: Wake (W), Non-rapid eye movement (N1, N2, N3) and Rapid Eye Movement (REM). After segmentation, we have 371,055 EEG samples. The [raw dataset](https://www.physionet.org/content/sleep-edfx/1.0.0/) is distributed under the Open Data Commons Attribution License v1.0.
+(1). **SleepEEG** contains 153 whole-night sleeping Electroencephalography (EEG) recordings that monitored by sleep cassette. The data is collected from 82 healthy subjects. The 1-lead EEG signal is sampled at 100 Hz. We segment the EEG signals into segments (window size is 200) without overlapping and each segment forms a sample. Every sample is associated with one of the five sleeping patterns/stages: Wake (W), Non-rapid eye movement (N1, N2, N3) and Rapid Eye Movement (REM). After segmentation, we have 371,055 EEG samples. The [raw dataset](https://www.physionet.org/content/sleep-edfx/1.0.0/) is distributed under the Open Data Commons Attribution License v1.0.
 
 (2). **Epilepsy** contains single-channel EEG measurements from 500 subjects. For each subject, the brain activity was recorded for 23.6 seconds. The dataset was then divided and shuffled (to mitigate sample-subject association) into 11,500 samples of 1 second each, sampled at 178 Hz. The raw dataset features 5 different classification labels corresponding to different status of the subject or location of measurement - eyes open, eyes closed, EEG measured in healthy brain region, EEG measured where the tumor was located, and, finally, the subject experiencing seizure episode. To emphasize the distinction between positive and negative samples in terms of epilepsy, We merge the first 4 classes into one and each time series sample has a binary label describing if the associated subject is experiencing seizure or not. There are 11,500 EEG samples in total. To evaluate the performance of pre-trained model on small fine-tuning dataset, we choose a tiny set (60 samples; 30 samples for each class) for fine-tuning and assess the model with a validation set (20 samples; 10 sample for each class). The model with best validation performance is use to make prediction on test set (the remaining 11,420 samples). The [raw dataset](https://repositori.upf.edu/handle/10230/42894) is distributed under the Creative Commons License (CC-BY) 4.0.
 
 (3), (4). **FD-A** and **FD-B** are subsets taken from the **FD** dataset, which is gathered from an electromechanical drive system that monitors the condition of rolling bearings and detect damages in them. There are four subsets of data collected under various conditions, whose parameters include rotational speed, load torque, and radial force. Each rolling bearing can be undamaged, inner damaged, and outer damaged, which leads to three classes in total. We denote the subsets corresponding to condition A and condition B as Faulty Detection Condition A (**FD-A**) and Faulty Detection Condition B (**FD-B**) , respectively. Each original recording has a single channel with sampling frequency of 64k Hz and lasts 4 seconds. To deal with the long duration, we followe the procedure described by Eldele et al., that is, we use sliding window length of 5,120 observations and a shifting length of either 1,024 or 4,096 to make the final number of samples relatively balanced between classes. The [raw dataset](https://mb.uni-paderborn.de/en/kat/main-research/datacenter/bearing-datacenter/data-sets-and-download) is distributed under the Creative Commons Attribution-Non Commercial 4.0 International License.
 
-(5). **HAR** contains recordings of 30 health volunteers performing six daily activities such as walking, walking upstaris, walking downstairs, sitting, standing, and laying. The prediction labels are the six activities. The wearable sensors on a smartphone measure triaxial linear acceleration and triaxial angular velocity at 50 Hz. After preprocessing and isolating out gravitational acceleration from body acceleration, there are nine channels in total. To line up the semantic domain with the channels in the dataset use during fine-tuning **Gesture** we only use the three channels of body linear accelerations. The [raw dataset] is distributed AS-IS and no responsibility implied or explicit can be addressed to the authors or their institutions for its use or misuse. Any commercial use is prohibited.
+(5). **HAR** contains recordings of 30 health volunteers performing six daily activities such as walking, walking upstaris, walking downstairs, sitting, standing, and laying. The prediction labels are the six activities. The wearable sensors on a smartphone measure triaxial linear acceleration and triaxial angular velocity at 50 Hz. After preprocessing and isolating out gravitational acceleration from body acceleration, there are nine channels in total. To line up the semantic domain with the channels in the dataset use during fine-tuning **Gesture** we only use the three channels of body linear accelerations. The [raw dataset](https://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) is distributed AS-IS and no responsibility implied or explicit can be addressed to the authors or their institutions for its use or misuse. Any commercial use is prohibited.
 
 (6). **Gesture** contains accelerometer measurements of eight simple gestures that differed based on the paths of hand movement. The eight gestures are: hand swiping left, right, up, down, hand waving in a counterclockwise circle, or in clockwise circle, hand waving in a square, and waving a right arrow. The classification labels are those eight different types of gestures. The original paper reports inclusion of 4,480 gesture measurements, but through UCR Database we were only able to recover 440 measurements. The dataset is balanced with 55 samples each class and is of a suitable size for our purpose of fine-tuning experiments. Sampling frequency is not explicitly reported in the original paper but is presumably 100 Hz. The dataset uses three channels corresponding to three coordinate directions of linear acceleration. The [raw dataset](http://www.timeseriesclassification.com/description.php?Dataset=UWaveGestureLibrary) under some unknown license.
 
@@ -63,6 +60,28 @@ A table summarizing the statistics of all these eight datasets can be found in *
 For details on data-preprocessing, please refer to our paper. But we will explain our procedure and highlight some steps here for clarity. Our data-processing consists of two stages. First, we segmented time series recordings if they are too long, and we split the dataset (mainly, it's the fine-tuning sets) into train, validation, and test portions. We took care to assign all samples belong to a single recording to one partition only whenever that is possible, to avoid leaking data from the test set into the training set, but for pre-processed datasets like Epilepsy this is not possible. The train : val ratio is at about 3 : 1 and we used balanced number of samples for each class whenever possible. All remaining samples not included in the train and validation partitions are used in the test partition to better estimate the performance metrics of the models. After the first stage, we produced three .pt (pytorch format) files corresponding to the three partitions for each dataset. Each file contains a dictionary with keys of `samples` and `labels` and corresponding values of torch tensors storing the data, respectively. For samples the tensor dimensions correspond to the number of samples, number of channels, and, finally, length of each time series sample. This is the standard format that can be directly read in by the TS-TCC model as well as our TF-C implementation. These preprocessed datasets can be conveniently downloaded from (????) or viaa script (???) into the datasets folder in this repo. 
 
 The second step consists of converting, for each dataset, from the three .pt files, to the accepted input format for each of the baseline models and place them in correct directories relative to the script that handles the pre-training and fine-tuning process. We have prepared simple scripts for these straightforward tasks but did not automate them. To further reduce the clutter of files in the repo, we have chosen to omit them from the baseline folders. Also, note that in the second experiment of one-to-many pre-training, the fine-tuning datasets are further clipped to have the same length as the sleepEEG dataset. The pre-processing scripts are available upon reasonable request.
+
+
+
+The processed datasets can be manually downloaded at the following links. Then you have to place the files inside the corresponding folder under `datasets/dataset_name`:
+
+(1). **SleepEEG**: https://figshare.com/articles/dataset/TF-C_Pretrain_SleepEEG/19930178
+
+(2). **Epilepsy**: https://figshare.com/articles/dataset/TF-C_Pretrain_Epilepsy/19930199
+
+(3). **FD-A**: https://figshare.com/articles/dataset/TF-C_Pretrain_FD-A/19930205
+
+(4). **FD-B**: https://figshare.com/articles/dataset/TF-C_Pretrain_FD-B/19930226
+
+(5). **HAR**: https://figshare.com/articles/dataset/TF-C_Pretrain_HAR/19930244
+
+(6). **Gesture**: https://figshare.com/articles/dataset/TF-C_Pretrain_Gesture/19930247
+
+(7). **ECG**: https://figshare.com/articles/dataset/TF-C_Pretrain_ECG/19930253
+
+(8). **EMG**: https://figshare.com/articles/dataset/TF-C_Pretrain_EMG/19930250
+
+
 
 
 ## Requirements
@@ -94,7 +113,9 @@ year      = {2022}
 
 ## Miscellaneous
 
-Please send any questions you might have about the code and/or the algorithm to <xiang_zhang@hms.harvard.edu>. Alternatively, you can open an issue under the current repo and we will be notified. -->
+<!--- Please send any questions you might have about the code and/or the algorithm to <xiang_zhang@hms.harvard.edu>. Alternatively, you can open an issue under the current repo and we will be notified. --->
+
+
 
 ## License
 
