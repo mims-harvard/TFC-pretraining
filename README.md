@@ -15,7 +15,9 @@ Our model is inspired by the well-known Fourier theorem used extensively in sign
 <!-- ![TF-C idea] -->
 <!-- (images/fig2.pdf"Idea of Time-Frequency Consistency (TF-C).") -->
 
-![TFC-idea](images/fig2.pdf)
+<p align="center">
+    <img src="images/fig2.png" width="600" align="center">
+</p>
 
 
 
