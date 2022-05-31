@@ -14,7 +14,7 @@ for dataset_name in dataset_lst:
     train_output = np.expand_dims(train_dict['labels'], axis=1)
     test_output = np.expand_dims(test_dict['labels'], axis=1)
 
-    savepath = os.path.join(basepath, 'code', 'baselines', 'Mixing-up', 'data', dataset_name)
+    savepath = os.path.join('code', 'baselines', 'Mixing-up', 'data', dataset_name)
     if os.path.isdir(savepath) == False:
         os.makedirs(savepath)
     np.save(os.path.join(savepath, 'train_input.npy'), train_input)

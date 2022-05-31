@@ -11,7 +11,6 @@ modality_lst = ['eeg', 'eeg', 'other', 'other', 'other', 'other', 'ecg', 'emg']
 fraction = 1
 term = 'All Terms'
 desired_leads = ['I']
-basepath = os.path.join(os.getcwd())
 
 for alias, dirname, trial, modality in zip(alias_lst, dirname_lst, trial_lst, modality_lst):
     train_dict = torch.load(os.path.join('datasets', dirname, 'train.pt'))
@@ -51,7 +50,7 @@ for alias, dirname, trial, modality in zip(alias_lst, dirname_lst, trial_lst, mo
     pid_dict[modality][fraction]['val'][term] = \
         np.expand_dims(np.arange(ctr, ctr+len(val_dict['labels'])), axis=1)
 
-    savepath = os.path.join(basepath, 'code', 'baselines', 'CLOCS', 'data', alias, trial,'leads_%s' % str(desired_leads))
+    savepath = os.path.join('code', 'baselines', 'CLOCS', 'data', alias, trial,'leads_%s' % str(desired_leads))
     if os.path.isdir(savepath) == False:
         os.makedirs(savepath)
 
