@@ -16,7 +16,7 @@ tar -xf Gesture.zip -C datasets/Gesture/
 tar -xf ECG.zip -C datasets/ECG/
 tar -xf EMG.zip -C datasets/EMG/
 
-rm {SleepEEG,Epilepsy,FD-A,FD-B,HAR,Gesture,ECG,EMG}.zip 
+rm {SleepEEG,Epilepsy,FD-A,FD-B,HAR,Gesture,ECG,EMG}.zip
 
 
 

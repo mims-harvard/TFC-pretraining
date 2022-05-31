@@ -66,7 +66,7 @@ import datautils
 train_data, train_labels, test_data, test_labels = datautils.load_UCR('ECG200')
 # (Both train_data and test_data have a shape of n_instances x n_timestamps x n_features)
 
-# Train a TS2Vec model
+# Train a TS2vec model
 model = TS2Vec(
     input_dims=1,
     device=0,

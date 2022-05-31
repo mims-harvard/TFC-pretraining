@@ -4,14 +4,14 @@ import os
 import pickle
 
 alias_lst = ['sleepEDF', 'epilepsy', 'pFD_A', 'pFD_B', 'HAR', 'AHAR', 'physionet2017', 'emg']
-dirname_lst = ['SleepEDF', 'Epilepsy', 'FD-A', 'FD-B', 'HAR', 'Gesture', 'ecg', 'emg']
+dirname_lst = ['SleepEEG', 'Epilepsy', 'FD-A', 'FD-B', 'HAR', 'Gesture', 'ecg', 'emg']
 trial_lst = ['contrastive_ms', 'contrastive_ss', 'contrastive_ms', 'contrastive_ss', 'contrastive_ms', 'contrastive_ss', 'contrastive_ms', 'contrastive_ss']
 phase_lst = ['train','val','test']
 modality_lst = ['eeg', 'eeg', 'other', 'other', 'other', 'other', 'ecg', 'emg']
 fraction = 1
 term = 'All Terms'
 desired_leads = ['I']
-basepath = os.path.join(os.getcwd(), '..')
+basepath = os.path.join(os.getcwd())
 
 for alias, dirname, trial, modality in zip(alias_lst, dirname_lst, trial_lst, modality_lst):
     train_dict = torch.load(os.path.join('datasets', dirname, 'train.pt'))
@@ -51,7 +51,7 @@ for alias, dirname, trial, modality in zip(alias_lst, dirname_lst, trial_lst, mo
     pid_dict[modality][fraction]['val'][term] = \
         np.expand_dims(np.arange(ctr, ctr+len(val_dict['labels'])), axis=1)
 
-    savepath = os.path.join(basepath, 'code', 'baselines', 'clocs', 'data', alias, trial,'leads_%s' % str(desired_leads))
+    savepath = os.path.join(basepath, 'code', 'baselines', 'CLOCS', 'data', alias, trial,'leads_%s' % str(desired_leads))
     if os.path.isdir(savepath) == False:
         os.makedirs(savepath)
 
