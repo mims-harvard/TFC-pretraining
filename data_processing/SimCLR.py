@@ -1,5 +1,6 @@
 import torch
 import numpy as np
+import os
 
 dataset_lst = ['SleepEEG', 'Epilepsy', 'FD-A', 'FD-B', 'HAR', 'Gesture', 'ecg', 'emg']
 n_classes_lst = [5, 2, 3, 3, 6, 8, 4, 3]
@@ -60,14 +61,14 @@ def scatter_numpy(self, dim, index, src):
 
     return self
 
-for dataset, n_classes in zip(dataset_lst, n_classes_lst):
+for dataset_name, n_classes in zip(dataset_lst, n_classes_lst):
     savepath = os.path.join('code', 'baselines', 'SimCLR', dataset_name)
     if os.path.isdir(savepath) == False:
         os.makedirs(savepath)
 
-    train_dict = torch.load('train.pt')
-    val_dict = torch.load('val.pt')
-    test_dict = torch.load('test.pt')
+    train_dict = torch.load(os.path.join('datasets', dataset_name, 'train.pt'))
+    val_dict = torch.load(os.path.join('datasets', dataset_name, 'val.pt'))
+    test_dict = torch.load(os.path.join('datasets', dataset_name, 'test.pt'))
     np.save(os.path.join(savepath, 'train_x.npy'), train_dict['samples'].transpose(1,2))
     np.save(os.path.join(savepath, 'test_x.npy'), test_dict['samples'].transpose(1,2))
     np.save(os.path.join(savepath, 'val_x.npy'), val_dict['samples'].transpose(1,2))

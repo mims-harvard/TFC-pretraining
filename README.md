@@ -93,7 +93,7 @@ Next, for CLOCS, we need to make a more complicated nested dictionary holding th
 
 Finally, for SimCLR, we do not have a datafolder but directly place files under `SimCLR/dataset_name`. For the data itself, we note that the tensor storing time series have the second and third dimension, corresponding to channels and observations, swapped, relative to our starting files. Also, the labels cannot be numeric but have to be in one-hot format. These are handled in the `data_processing/SimCLR.py` script for convenience.
 
-Of course, we also provide the shortcut script for doing all the steps above, by directly running `process_all.sh` from the root directory of the git repository.
+Of course, we also provide the shortcut script for doing all the steps above, by directly running `process_all.sh` from the root directory of the git repository. Make sure you are in the correct environment as specified by the `baseline_requirements.yml` before running the scripts.
 
 
 
@@ -102,7 +102,7 @@ Of course, we also provide the shortcut script for doing all the steps above, by
 
 TF-C has been tested using Python XXX.
 
-For the baselines, unfortunately, we have not managed to unify the environments, so you have to build three different environments to cover all six DL baselines. For ts2vec, use ts2vec_requirements.yml. For SimCLR, because Tang et al. used tensorflow framework, please use simclr_requirements.yml. For the other four baselines, use baseline_requirements.yml. To use these files to install dependencies for this project via Conda, run the following command:
+For the baselines, unfortunately, we have not managed to unify the environments, so you have to build three different environments to cover all six DL baselines. For ts2vec, use ts2vec_requirements.yml. For SimCLR, because Tang et al. used tensorflow framework, please use simclr_requirements.yml. For the other four baselines, use `baseline_requirements.yml`. To use these files to install dependencies for this project via Conda, run the following command:
 
 `conda env create -f XXX_requirements.yml `
 
