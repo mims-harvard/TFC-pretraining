@@ -8,16 +8,21 @@ This repository contains eight processed datasets and the codes of developed TF-
 <!-- Please consult our paper for more details about our model and the experiments. -->
 
 
-
 ## Key idea of TF-C
 
-Our model is inspired by the well-known Fourier theorem used extensively in signal processing that states the equivalence between time domain and frequency domain representations of a continuous-time signal. We not only devised augmentations for time series in the time domain and in the frequency domain, but our contrastive loss has an additional term that requires the time- and frequency-domain embeddings be close to each other. Inspired by the triplet loss, we further specify that the similarity between the original time-frequency embedding pairs to be smaller than other possible pairs. We believe our model structure combined with the contrastive loss is sufficiently general to introduce inductive bias to the model that drives transfer learning across different time series domains. See the following figure for an illustration of our TF-C approach. Please see our paper for details on the particular choices of encoder and projector networks, model hyperparameters, and component loss function.
+Our model captures the generalizable property of time series, Time-Frequency Consistency (TF-C), in a large pre-training time series dataset. TF-C means the time-based representation and the frequency-based representation, which are learned from the same time series sample, are closer to each other in a joint time-frequency space, and farther apart if the representations are associated with different time series samples. By modeling the TF-C, which is a characteristic unique to time series, the developed model can capture the underlying common pattern in time series and further empower knowledge transfer across different time series datasets. The different time series datasets are compounded by complexity in terms of large variations of temporal dynamics across datasets, varying semantic meaning, irregular sampling, system factors (e.g., different devices or subjects), etc. 
+Moreover, the developed model enables self-supervised pre-training (which doesn't demand labels in the pre-training dataset) by adopting contrastive learning framework. Our TF-C approach is shown in the following figure. 
+our model has four components: a time encoder, a frequency encoder, and two cross-space projectors that map time-based and frequency-based representations, respectively, to the same time-frequency space. Together, the four components provide a way to embed the input time series to the latent time-frequency space such that time-based embedding and frequency-based embedding are close together.
 
-<!-- ![TF-C idea] -->
-<!-- (images/fig2.pdf"Idea of Time-Frequency Consistency (TF-C).") -->
+<!-- See the following figure for an illustration of our TF-C approach. Please see our paper for details on the particular choices of encoder and projector networks, model hyperparameters, and component loss function. -->
+
+
+<!-- Specifically, we adopt contrastive learning in time space to generate a time-based
+67 representation.
+Our model is inspired by the well-known Fourier theorem used extensively in signal processing that states the equivalence between time domain and frequency domain representations of a continuous-time signal. We not only devised augmentations for time series in the time domain and in the frequency domain, but our contrastive loss has an additional term that requires the time- and frequency-domain embeddings be close to each other. Inspired by the triplet loss, we further specify that the similarity between the original time-frequency embedding pairs to be smaller than other possible pairs. We believe our model structure combined with the contrastive loss is sufficiently general to introduce inductive bias to the model that drives transfer learning across different time series domains.  -->
 
 <p align="center">
-    <img src="images/fig2.png" width="600" align="center">
+    <img src="images/fig2.png" width="1000" align="center">
 </p>
 
 
