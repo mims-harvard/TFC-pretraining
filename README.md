@@ -82,7 +82,7 @@ The second step consists of converting, for each dataset, from the three .pt fil
 **Step one** 
 The processed datasets can be manually downloaded at the following links. Then you have to place the files inside the corresponding folder under `data/dataset_name` (such as `data/SleepEEG`):
 
-The well-processed datasets will be released (in FigShare) after acceptance. 
+**The well-processed datasets will be released (in FigShare) after acceptance. **
 
 <!-- (1). **SleepEEG**: https://figshare.com/articles/dataset/TF-C_Pretrain_SleepEEG/19930178
 
