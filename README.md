@@ -50,7 +50,7 @@ We prepared eight datasets for the four different scenarios that we used to comp
 
 (8). Electromyograms (EMG) measures muscle responses as electrical activity to neural stimulation, and they can be used to diagnose certain muscular dystrophies and neuropathies. **EMG** consists of single-channel EMG recording from the tibialis anterior muscle of three volunteers that are healthy, suffering from neuropathy, and suffering from myopathy, respectively. The recordings are sampled with the frequency of 4K Hz. Each patient, i.e., their disorder, is a separate classification category. Then the recordings are split into time series samples using a fixed-length window of 1,500 observations. The [raw dataset](https://physionet.org/content/emgdb/1.0.0/) is distributed under the Open Data Commons Attribution License v1.0.
 
-A table summarizing the statistics of all these eight datasets is reproduced from **Appendix B** and shown below:
+The following table summarizes the statistics of all these eight datasets:
 
 | Scenario # |              | Dataset      | # Samples    | # Channels | # Classes | Length | Freq (Hz) |
 | ---------- | ------------ | ------------ | ------------ | ---------- | --------- | ------ | --------- |
