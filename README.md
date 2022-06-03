@@ -84,21 +84,6 @@ The processed datasets can be manually downloaded at the following links. Then y
 
 **The well-processed datasets will be released (in FigShare) after acceptance. **
 
-<!-- (1). **SleepEEG**: https://figshare.com/articles/dataset/TF-C_Pretrain_SleepEEG/19930178
-
-(2). **Epilepsy**: https://figshare.com/articles/dataset/TF-C_Pretrain_Epilepsy/19930199
-
-(3). **FD-A**: https://figshare.com/articles/dataset/TF-C_Pretrain_FD-A/19930205
-
-(4). **FD-B**: https://figshare.com/articles/dataset/TF-C_Pretrain_FD-B/19930226
-
-(5). **HAR**: https://figshare.com/articles/dataset/TF-C_Pretrain_HAR/19930244
-
-(6). **Gesture**: https://figshare.com/articles/dataset/TF-C_Pretrain_Gesture/19930247
-
-(7). **ECG**: https://figshare.com/articles/dataset/TF-C_Pretrain_ECG/19930253
-
-(8). **EMG**: https://figshare.com/articles/dataset/TF-C_Pretrain_EMG/19930250 -->
 
 Alternatively, you can use the `download_datasets.sh` script to automatically download and decompress all datasets into the respective directories. This immediately finishes the first step of preprocessing.
 
