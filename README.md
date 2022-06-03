@@ -156,5 +156,5 @@ year      = {2022}
 
 ## License
 
-TF-C subjects to the MIT License.
+TF-C codebase is released under the MIT license.
 
