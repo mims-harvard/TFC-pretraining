@@ -50,9 +50,18 @@ We prepared eight datasets for the four different scenarios that we used to comp
 
 (8). Electromyograms (EMG) measures muscle responses as electrical activity to neural stimulation, and they can be used to diagnose certain muscular dystrophies and neuropathies. **EMG** consists of single-channel EMG recording from the tibialis anterior muscle of three volunteers that are healthy, suffering from neuropathy, and suffering from myopathy, respectively. The recordings are sampled with the frequency of 4K Hz. Each patient, i.e., their disorder, is a separate classification category. Then the recordings are split into time series samples using a fixed-length window of 1,500 observations. The [raw dataset](https://physionet.org/content/emgdb/1.0.0/) is distributed under the Open Data Commons Attribution License v1.0.
 
-<!-- A table summarizing the statistics of all these eight datasets can be found in **Appendix B** of our paper. -->
+A table summarizing the statistics of all these eight datasets is reproduced from **Appendix B** and shown below:
 
-
+| Scenario # |              | Dataset      | # Samples    | # Channels | # Classes | Length | Freq (Hz) |
+| ---------- | ------------ | ------------ | ------------ | ---------- | --------- | ------ | --------- |
+| 1          | Pre-training | **SleepEEG** | 371,055      | 1          | 5         | 200    | 100       |
+|            | Fine-tuning  | **Epilepsy** | 60/20/11,420 | 1          | 2         | 178    | 174       |
+| 2          | Pre-training | **FD-A**     | 8,184        | 1          | 3         | 5,120  | 64K       |
+|            | Fine-tuning  | **FD-B**     | 60/21/13,559 | 1          | 3         | 5,120  | 64K       |
+| 3          | Pre-training | **HAR**      | 10,299       | 9          | 6         | 128    | 50        |
+|            | Fine-tuning  | **Gesture**  | 320/120/120  | 3          | 8         | 315    | 100       |
+| 4          | Pre-training | **ECG**      | 43,673       | 1          | 4         | 1,500  | 300       |
+|            | Fine-tuning  | **EMG**      | 122/41/41    | 1          | 3         | 1,500  | 4,000     |
 
 ### Processed data
 
