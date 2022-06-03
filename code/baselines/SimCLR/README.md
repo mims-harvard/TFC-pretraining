@@ -82,3 +82,21 @@ The NT-Xent Loss function is based on a implemention by The SimCLR Authors, at h
 # Copyright
 
 Copyright (c) 2020 Chi Ian Tang
+
+
+
+# Hyperparameters
+
+Range of random seeds used for the five replicates is 1 - 5.
+
+We used 100 epochs uniformly for the fine-tuning steps in all scenarios.
+
+The following table shows hyperparameters that vary between different scenarios that produced the best results we have obtained and reported in the paper:
+
+|          | n_epochs for pre-training |
+| -------- | ------------------------- |
+| SleepEEG | 5                         |
+| FD-A     | 20                        |
+| HAR      | 40                        |
+| ECG      | 5                         |
+

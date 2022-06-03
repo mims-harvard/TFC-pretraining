@@ -44,9 +44,24 @@ To evaluate the model(s) in the paper, run this command:
 python run_experiments.py
 ```
 
-# Additional notes on how to actually download data and train/fine-tune
-1. Run the download_data.py script to download the Physionet2020 data, which will be used for pretraining. The same script will also download the Chapman data, which will be used for fine-tuning during the transfer learning phase. Note you have to manually edit the spreadsheet name in the chapman_ecg folder to `Diagnostics.xlsx` and then export a `.csv` file for yourself (I should probably do this in the script).  
-2. For the data preparation stage, we also have to run some of the authors' scripts. For Physionet2020 first run `load_physionet2020.py` and then run `generates_frames_and_lables_phases.py`. For Chapman, just run `load_chapman_ecg.py`. I think I have modified these scripts to automatically detect our cwd to do the file manipulations. If not, please check it for yourself.
-3. Finally we can train the model. For pretraining, first open the `run_experiments.py` and modify the parameters at the bottom the file. Specifically, change `trial_to_run_list` to contain just `CMSC` or `CMLC` or `CMSMLC`. The to_load list doesn't matter. For the downstream_dataset and second_dataset use both `physionet2020`. Finally, modify the `labelled_fraction` to be 1. Additionally, you can provide a list of embedding dimensions to train models of multiple sizes.
-4. After pretraining, we have to modify the script to do fine-tuning. Change trial_to_run to `Fine-Tuning` and the second_dataset to `chapman`. Then lower the labelled_fraction to 0.5 or lower, otherwise you will get spuriously good results. Then run the script again and it will produce some fine-tuned models. By default it should run for about 80 epochs.
+
+
+# Hyperparameters
+
+Range of random seeds used for the five replicates are 0 - 4.
+
+Pre-training batch size is set to 256 and fine-tuning batch size is 4.
+
+The following table shows hyperparameters that vary between different scenarios that produced the best results we have obtained and reported in the paper:
+
+|          | K1-k3, s1-s3 (for conv layers) | Last 1D max-pooling layer size | Input dimension of view_linear_modules | n_epochs |
+| -------- | ------------------------------ | ------------------------------ | -------------------------------------- | -------- |
+| SleepEEG | 733, 221                       | 2                              | 32                                     | 5        |
+| Epilepsy | 733, 221                       | 8                              | 32                                     | 20       |
+| FD-A     | 777, 444                       | 2                              | 128                                    | 20       |
+| FD-B     | 777, 444                       | 4                              | 128                                    | 50       |
+| HAR      | 444, 221                       | 2                              | 32                                     | 10       |
+| Gesture  | 444, 221                       | 6                              | 32                                     | 50       |
+| ECG      | 777, 333                       | 2                              | 64                                     | 5        |
+| EMG      | 777, 333                       | 6                              | 64                                     | 20       |
 

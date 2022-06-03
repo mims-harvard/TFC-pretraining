@@ -109,3 +109,39 @@ Emadeldeen Eldele
 School of Computer Science and Engineering (SCSE),   
 Nanyang Technological University (NTU), Singapore.   
 Email: emad0002{at}e.ntu.edu.sg   
+
+
+
+# Hyperparameters
+
+Range of random seeds used for the five replicates is 2-5 and 123.
+
+Learning rate is set to 3e-4 throughout all training steps. 
+
+The following table shows hyperparameters that vary between different scenarios that produced the best results we have obtained and reported in the paper:
+
+|          | n_epochs | batch_size |
+| -------- | -------- | ---------- |
+| SleepEEG | 40       | 128        |
+| Epilepsy | 40       | 20         |
+| FD-A     | 40       | 128        |
+| FD-B     | 40       | 16         |
+| HAR      | 40       | 128        |
+| Gesture  | 40       | 16         |
+| ECG      | 40       | 128        |
+| EMG      | 20       | 16         |
+
+
+
+Notably, the TS-TCC codebase is also used to implement TS-SD. The same collection of random seeds is used. Learning rate for pre-training is set to 3e-7 due to the smaller magnitude of the loss function used for the time series denoising task. The hyperparameters choices are reported below:
+
+|          | n_epochs | batch_size |
+| -------- | -------- | ---------- |
+| SleepEEG | 3        | 128        |
+| Epilepsy | 80       | 16         |
+| FD-A     | 3        | 4          |
+| FD-B     | 40       | 16         |
+| HAR      | 5        | 64         |
+| Gesture  | 40       | 16         |
+| ECG      | 1        | 64         |
+| EMG      | 20       | 16         |

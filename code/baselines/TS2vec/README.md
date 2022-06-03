@@ -92,3 +92,9 @@ test_repr = model.encode(
 )  # n_instances x n_timestamps x output_dims
 # (The timestamp t's representation vector is computed using the observations located in [t-50, t])
 ```
+
+
+
+# Hyperparameters
+
+Random seeds used are 42 and 1-4. We used batch_size of 64, hidden_dims = 1, and 1 epochs for pre-training the model. More details are given in the Appendix section of our paper. We also reduced the number of hidden residual blocks in the encoder to 2 without compromising model performance but speeds up the training process. Finally, we used logistic regression in the last layer during fine-tuning because it has better performance over KNN or SVM in our case.
