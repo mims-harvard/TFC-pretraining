@@ -12,14 +12,6 @@ from model import * # base_Model, base_Model_F, target_classifier
 from dataloader import data_generator
 from trainer import Trainer, model_finetune, model_test #model_evaluate
 
-# wandb = True
-# if wandb:
-#     import wandb
-#     os.environ['WANDB_SILENT']="true"
-#
-#     wandb.login(key=str('14734fe9c5574e019e8f517149a20d6fe1b2fd0d'))
-#     config = wandb.config
-#     run = wandb.init(project='TransferIS', entity='xiang_zhang', config={'wandb_nb':'wandb_three_in_one_hm'})
 
 # Args selections
 start_time = datetime.now()
