@@ -1,7 +1,7 @@
 
 # Self-Supervised Contrastive Pre-Training For Time Series via Time-Frequency Consistency
 
-#### Authors: [Xiang Zhang](http://xiangzhang.info/) (xiang.alan.zhang@gmail.com), [Ziyuan Zhao](https://github.com/mims-harvard/Raindrop)(ziyuanzhao@college.harvard.edu), <br/>
+#### Authors: [Xiang Zhang](http://xiangzhang.info/) (xiang.zhang@uncc.edu), [Ziyuan Zhao](https://github.com/mims-harvard/Raindrop)(ziyuanzhao@college.harvard.edu), <br/>
 ####  [Theodoros Tsiligkaridis](https://github.com/mims-harvard/Raindrop)(ttsili@ll.mit.edu), [Marinka Zitnik](https://zitniklab.hms.harvard.edu/) (marinka@hms.harvard.edu)
 
 #### [Project website](https://zitniklab.hms.harvard.edu/projects/TF-C/)
