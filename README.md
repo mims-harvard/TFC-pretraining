@@ -1,6 +1,10 @@
-<!-- # SELF-SUPERVISED CONTRASTIVE PRE-TRAINING FOR TIME SERIES VIA TIME-FREQUENCY CONSISTENCY -->
 
 # Self-Supervised Contrastive Pre-Training For Time Series via Time-Frequency Consistency
+
+#### Authors: [Xiang Zhang](http://xiangzhang.info/) (xiang.alan.zhang@gmail.com), [Ziyuan Zhao](https://github.com/mims-harvard/Raindrop)(ziyuanzhao@college.harvard.edu), <br/>
+####  [Theodoros Tsiligkaridis](https://github.com/mims-harvard/Raindrop)(ttsili@ll.mit.edu), [Marinka Zitnik](https://zitniklab.hms.harvard.edu/) (marinka@hms.harvard.edu)
+
+#### [Project website](https://zitniklab.hms.harvard.edu/projects/TF-C/)
 
 ## Overview 
 
@@ -128,16 +132,16 @@ For the baselines, we have not managed to unify the environments due to the larg
 
 **Reproduce baselines** You are advised to run the models from the corresponding folders under `code/baselines/` using the command-line patterns described by the original authors' `README  .md` files whenever possible. We note that in the case of Mixing-up and SimCLR, pre-training and fine-tuning are done by directly running `train_model.py` and `finetune_model.py` without passing in arguments. Similarly, for CLOCS, one must manually modify the hyperparameters to the training procedure inside the main file (  `run_experiments.py` in this case). Please reach out to the original authors of these baselines if you have any questions about setting these hyperparameters in their models. Finally, for each baseline, on different pairs of datasets, the performance of transfer learning can vary depending on the hyperparameter choices. We have manually experimented with them and chose the combinations that gave the best performance while keeping the model complexity of different baselines comparable. We include tables describing the specific combinations of hyperparameters we used for different datasets whenever necessary, in the corresponding folder for the different baselines so that reproducing our result is made possible. Please note some baselines are designed for representation learning (instead of pre-training) of time series, we use these baselines in the same setups as our model to make results comparable.
 
-<!-- ## Citation
+## Citation
 
 If you find *TF-C* useful for your research, please consider citing this paper:
 
 ````
 ```
-@inproceedings{??,
-Title = {Self-Supervised Contrastive Pre-Training For Time Series via Time-Frequency Consistency},
-author = {??},
-booktitle = {arxiv??},
+@inproceedings{zhang2022self,
+title = {Self-Supervised Contrastive Pre-Training For Time Series via Time-Frequency Consistency},
+author = {Zhang, Xiang and Zhao, Ziyuan and Tsiligkaridis, Theodoros and Zitnik, Marinka},
+booktitle = {Proceedings of Neural Information Processing Systems, NeurIPS},
 year      = {2022}
 }
 ```
@@ -145,7 +149,7 @@ year      = {2022}
 
 ## Miscellaneous
 
-<!--- Please send any questions you might have about the code and/or the algorithm to <xiang_zhang@hms.harvard.edu>. Alternatively, you can open an issue under the current repo and we will be notified. --->
+Please send any questions you might have about the code and/or the algorithm to <xiang.alan.zhang@gmail.com>. 
 
 
 
