@@ -2,3 +2,7 @@
 **/.DS_Store
 old_README.md
 **/.idea
+datasets
+*.log
+*.pt
+*.zip
