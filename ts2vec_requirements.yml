@@ -1,0 +1,45 @@
+name: ts2vec
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - _libgcc_mutex=0.1
+  - _openmp_mutex=4.5
+  - bzip2=1.0.8
+  - ca-certificates=2021.10.8
+  - ld_impl_linux-64=2.36.1
+  - libffi=3.4.2
+  - libgcc-ng=11.2.0
+  - libgomp=11.2.0
+  - libnsl=2.0.0
+  - libuuid=2.32.1
+  - libzlib=1.2.11
+  - ncurses=6.3
+  - openssl=3.0.2
+  - pip=22.0.4
+  - python=3.8.13
+  - python_abi=3.8
+  - readline=8.1
+  - setuptools=62.1.0
+  - sqlite=3.38.3
+  - tk=8.6.12
+  - wheel=0.37.1
+  - xz=5.2.5
+  - zlib=1.2.11
+  - pip:
+    - bottleneck==1.3.2
+    - joblib==1.1.0
+    - numpy==1.19.2
+    - pandas==1.0.1
+    - patsy==0.5.2
+    - python-dateutil==2.8.2
+    - pytz==2022.1
+    - scikit-learn==0.24.2
+    - scipy==1.6.1
+    - six==1.16.0
+    - statsmodels==0.12.2
+    - threadpoolctl==3.1.0
+    - torch==1.8.1
+    - typing-extensions==4.2.0
+
