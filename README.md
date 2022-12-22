@@ -6,7 +6,7 @@
 
 #### [Project website](https://zitniklab.hms.harvard.edu/projects/TF-C/)
 
-### [TF-C](https://openreview.net/forum?id=OJ4mMfGKLN) (NeurIPS 2022), [Preprint](https://arxiv.org/abs/2206.08496)
+#### TF-C Paper: [NeurIPS 2022](https://openreview.net/forum?id=OJ4mMfGKLN), [Preprint](https://arxiv.org/abs/2206.08496)
 
 ## Overview 
 
