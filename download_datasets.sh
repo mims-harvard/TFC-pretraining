@@ -7,14 +7,14 @@ wget -O Gesture.zip https://figshare.com/ndownloader/articles/19930247/versions/
 wget -O ECG.zip https://figshare.com/ndownloader/articles/19930253/versions/1
 wget -O EMG.zip https://figshare.com/ndownloader/articles/19930250/versions/1
 
-tar -xf SleepEEG.zip -C datasets/SleepEEG/
-tar -xf Epilepsy.zip -C datasets/Epilepsy/
-tar -xf FD-A.zip -C datasets/FD-A/
-tar -xf FD-B.zip -C datasets/FD-B/
-tar -xf HAR.zip -C datasets/HAR/
-tar -xf Gesture.zip -C datasets/Gesture/
-tar -xf ECG.zip -C datasets/ECG/
-tar -xf EMG.zip -C datasets/EMG/
+unzip SleepEEG.zip -d datasets/SleepEEG/
+unzip  Epilepsy.zip -d datasets/Epilepsy/
+unzip  FD-A.zip -d datasets/FD-A/
+unzip  FD-B.zip -d datasets/FD-B/
+unzip  HAR.zip -d datasets/HAR/
+unzip  Gesture.zip -d datasets/Gesture/
+unzip  ECG.zip -d datasets/ECG/
+unzip  EMG.zip -d datasets/EMG/
 
 rm {SleepEEG,Epilepsy,FD-A,FD-B,HAR,Gesture,ECG,EMG}.zip
 
