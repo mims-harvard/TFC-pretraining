@@ -1,0 +1,811 @@
+=============================================
+Pre-training Dataset: SleepEEG
+Target (fine-tuning) Dataset: Epilepsy
+Method:  TF-C
+Mode:    pre_train
+=============================================
+Data loaded ...
+Training started ....
+
+Pre-training Epoch : 1
+Train Loss     : 14.0212	 | 	Train Accuracy     : 0.4053	 | 	Train AUC : 0.5058
+
+
+Pre-training Epoch : 2
+Train Loss     : 12.9608	 | 	Train Accuracy     : 0.4927	 | 	Train AUC : 0.5081
+
+
+Pre-training Epoch : 3
+Train Loss     : 11.7871	 | 	Train Accuracy     : 0.4927	 | 	Train AUC : 0.4939
+
+
+Pre-training Epoch : 4
+Train Loss     : 11.1048	 | 	Train Accuracy     : 0.4927	 | 	Train AUC : 0.5023
+
+
+Pre-training Epoch : 5
+Train Loss     : 10.7635	 | 	Train Accuracy     : 0.4927	 | 	Train AUC : 0.5196
+
+
+Pre-training Epoch : 6
+Train Loss     : 10.1553	 | 	Train Accuracy     : 0.4927	 | 	Train AUC : 0.5261
+
+
+Pre-training Epoch : 7
+Train Loss     : 9.9795	 | 	Train Accuracy     : 0.4927	 | 	Train AUC : 0.5353
+
+
+Pre-training Epoch : 8
+Train Loss     : 9.8608	 | 	Train Accuracy     : 0.4927	 | 	Train AUC : 0.5378
+
+
+Pre-training Epoch : 9
+Train Loss     : 9.7269	 | 	Train Accuracy     : 0.4927	 | 	Train AUC : 0.5383
+
+
+Pre-training Epoch : 10
+Train Loss     : 9.6237	 | 	Train Accuracy     : 0.4927	 | 	Train AUC : 0.5439
+
+
+Pre-training Epoch : 11
+Train Loss     : 9.4494	 | 	Train Accuracy     : 0.4927	 | 	Train AUC : 0.5542
+
+
+Pre-training Epoch : 12
+Train Loss     : 9.4267	 | 	Train Accuracy     : 0.4927	 | 	Train AUC : 0.5590
+
+
+Pre-training Epoch : 13
+Train Loss     : 9.4257	 | 	Train Accuracy     : 0.4927	 | 	Train AUC : 0.5612
+
+
+Pre-training Epoch : 14
+Train Loss     : 9.2085	 | 	Train Accuracy     : 0.4927	 | 	Train AUC : 0.5639
+
+
+Pre-training Epoch : 15
+Train Loss     : 9.0323	 | 	Train Accuracy     : 0.4927	 | 	Train AUC : 0.5592
+
+
+Pre-training Epoch : 16
+Train Loss     : 8.8740	 | 	Train Accuracy     : 0.4927	 | 	Train AUC : 0.5714
+
+
+Pre-training Epoch : 17
+Train Loss     : 8.7443	 | 	Train Accuracy     : 0.4927	 | 	Train AUC : 0.5726
+
+
+Pre-training Epoch : 18
+Train Loss     : 8.7044	 | 	Train Accuracy     : 0.4927	 | 	Train AUC : 0.5706
+
+
+Pre-training Epoch : 19
+Train Loss     : 8.5987	 | 	Train Accuracy     : 0.4927	 | 	Train AUC : 0.5808
+
+
+Pre-training Epoch : 20
+Train Loss     : 8.4147	 | 	Train Accuracy     : 0.4927	 | 	Train AUC : 0.5899
+
+
+Pre-training Epoch : 21
+Train Loss     : 8.2700	 | 	Train Accuracy     : 0.4927	 | 	Train AUC : 0.5865
+
+
+Pre-training Epoch : 22
+Train Loss     : 8.1905	 | 	Train Accuracy     : 0.4927	 | 	Train AUC : 0.5962
+
+
+Pre-training Epoch : 23
+Train Loss     : 8.0959	 | 	Train Accuracy     : 0.4933	 | 	Train AUC : 0.6005
+
+
+Pre-training Epoch : 24
+Train Loss     : 8.0488	 | 	Train Accuracy     : 0.4931	 | 	Train AUC : 0.6072
+
+
+Pre-training Epoch : 25
+Train Loss     : 7.9737	 | 	Train Accuracy     : 0.4928	 | 	Train AUC : 0.6130
+
+
+Pre-training Epoch : 26
+Train Loss     : 7.9569	 | 	Train Accuracy     : 0.4959	 | 	Train AUC : 0.6152
+
+
+Pre-training Epoch : 27
+Train Loss     : 7.9460	 | 	Train Accuracy     : 0.4994	 | 	Train AUC : 0.6237
+
+
+Pre-training Epoch : 28
+Train Loss     : 7.9464	 | 	Train Accuracy     : 0.4999	 | 	Train AUC : 0.6336
+
+
+Pre-training Epoch : 29
+Train Loss     : 7.9831	 | 	Train Accuracy     : 0.5021	 | 	Train AUC : 0.6399
+
+
+Pre-training Epoch : 30
+Train Loss     : 7.9431	 | 	Train Accuracy     : 0.5089	 | 	Train AUC : 0.6369
+
+
+Pre-training Epoch : 31
+Train Loss     : 8.0149	 | 	Train Accuracy     : 0.5127	 | 	Train AUC : 0.6493
+
+
+Pre-training Epoch : 32
+Train Loss     : 7.9618	 | 	Train Accuracy     : 0.5190	 | 	Train AUC : 0.6534
+
+
+Pre-training Epoch : 33
+Train Loss     : 7.8974	 | 	Train Accuracy     : 0.5149	 | 	Train AUC : 0.6636
+
+
+Pre-training Epoch : 34
+Train Loss     : 7.9431	 | 	Train Accuracy     : 0.5219	 | 	Train AUC : 0.6675
+
+
+Pre-training Epoch : 35
+Train Loss     : 8.0211	 | 	Train Accuracy     : 0.5213	 | 	Train AUC : 0.6512
+
+
+Pre-training Epoch : 36
+Train Loss     : 7.9927	 | 	Train Accuracy     : 0.5219	 | 	Train AUC : 0.6638
+
+
+Pre-training Epoch : 37
+Train Loss     : 7.9804	 | 	Train Accuracy     : 0.5222	 | 	Train AUC : 0.6707
+
+
+Pre-training Epoch : 38
+Train Loss     : 7.8780	 | 	Train Accuracy     : 0.5330	 | 	Train AUC : 0.6707
+
+
+Pre-training Epoch : 39
+Train Loss     : 7.8680	 | 	Train Accuracy     : 0.5219	 | 	Train AUC : 0.6677
+
+
+Pre-training Epoch : 40
+Train Loss     : 7.8141	 | 	Train Accuracy     : 0.5204	 | 	Train AUC : 0.6588
+
+
+Pre-training Epoch : 41
+Train Loss     : 7.7909	 | 	Train Accuracy     : 0.5280	 | 	Train AUC : 0.6636
+
+
+Pre-training Epoch : 42
+Train Loss     : 7.8008	 | 	Train Accuracy     : 0.5354	 | 	Train AUC : 0.6689
+
+
+Pre-training Epoch : 43
+Train Loss     : 7.8424	 | 	Train Accuracy     : 0.5276	 | 	Train AUC : 0.6669
+
+
+Pre-training Epoch : 44
+Train Loss     : 7.7607	 | 	Train Accuracy     : 0.5383	 | 	Train AUC : 0.6851
+
+
+Pre-training Epoch : 45
+Train Loss     : 7.7041	 | 	Train Accuracy     : 0.5351	 | 	Train AUC : 0.6823
+
+
+Pre-training Epoch : 46
+Train Loss     : 7.7299	 | 	Train Accuracy     : 0.5362	 | 	Train AUC : 0.6786
+
+
+Pre-training Epoch : 47
+Train Loss     : 7.6565	 | 	Train Accuracy     : 0.5320	 | 	Train AUC : 0.6800
+
+
+Pre-training Epoch : 48
+Train Loss     : 7.6241	 | 	Train Accuracy     : 0.5374	 | 	Train AUC : 0.6844
+
+
+Pre-training Epoch : 49
+Train Loss     : 7.5933	 | 	Train Accuracy     : 0.5138	 | 	Train AUC : 0.6899
+
+
+Pre-training Epoch : 50
+Train Loss     : 7.5713	 | 	Train Accuracy     : 0.5283	 | 	Train AUC : 0.6984
+
+
+Pre-training Epoch : 51
+Train Loss     : 7.5702	 | 	Train Accuracy     : 0.5465	 | 	Train AUC : 0.6925
+
+
+Pre-training Epoch : 52
+Train Loss     : 7.5803	 | 	Train Accuracy     : 0.5106	 | 	Train AUC : 0.6839
+
+
+Pre-training Epoch : 53
+Train Loss     : 7.5798	 | 	Train Accuracy     : 0.5522	 | 	Train AUC : 0.6952
+
+
+Pre-training Epoch : 54
+Train Loss     : 7.5104	 | 	Train Accuracy     : 0.5424	 | 	Train AUC : 0.6995
+
+
+Pre-training Epoch : 55
+Train Loss     : 7.5544	 | 	Train Accuracy     : 0.5200	 | 	Train AUC : 0.7024
+
+
+Pre-training Epoch : 56
+Train Loss     : 7.5297	 | 	Train Accuracy     : 0.5487	 | 	Train AUC : 0.7048
+
+
+Pre-training Epoch : 57
+Train Loss     : 7.4721	 | 	Train Accuracy     : 0.5424	 | 	Train AUC : 0.6941
+
+
+Pre-training Epoch : 58
+Train Loss     : 7.4594	 | 	Train Accuracy     : 0.5326	 | 	Train AUC : 0.7006
+
+
+Pre-training Epoch : 59
+Train Loss     : 7.4328	 | 	Train Accuracy     : 0.5520	 | 	Train AUC : 0.7061
+
+
+Pre-training Epoch : 60
+Train Loss     : 7.4110	 | 	Train Accuracy     : 0.5458	 | 	Train AUC : 0.7008
+
+
+Pre-training Epoch : 61
+Train Loss     : 7.3960	 | 	Train Accuracy     : 0.5312	 | 	Train AUC : 0.6958
+
+
+Pre-training Epoch : 62
+Train Loss     : 7.4246	 | 	Train Accuracy     : 0.5193	 | 	Train AUC : 0.7077
+
+
+Pre-training Epoch : 63
+Train Loss     : 7.3503	 | 	Train Accuracy     : 0.5450	 | 	Train AUC : 0.7050
+
+
+Pre-training Epoch : 64
+Train Loss     : 7.4008	 | 	Train Accuracy     : 0.5186	 | 	Train AUC : 0.6884
+
+
+Pre-training Epoch : 65
+Train Loss     : 7.3563	 | 	Train Accuracy     : 0.5221	 | 	Train AUC : 0.7066
+
+
+Pre-training Epoch : 66
+Train Loss     : 7.3478	 | 	Train Accuracy     : 0.5570	 | 	Train AUC : 0.7111
+
+
+Pre-training Epoch : 67
+Train Loss     : 7.3687	 | 	Train Accuracy     : 0.5181	 | 	Train AUC : 0.7061
+
+
+Pre-training Epoch : 68
+Train Loss     : 7.3010	 | 	Train Accuracy     : 0.5603	 | 	Train AUC : 0.7155
+
+
+Pre-training Epoch : 69
+Train Loss     : 7.3373	 | 	Train Accuracy     : 0.5432	 | 	Train AUC : 0.7015
+
+
+Pre-training Epoch : 70
+Train Loss     : 7.3455	 | 	Train Accuracy     : 0.5443	 | 	Train AUC : 0.7006
+
+
+Pre-training Epoch : 71
+Train Loss     : 7.4240	 | 	Train Accuracy     : 0.5573	 | 	Train AUC : 0.7037
+
+
+Pre-training Epoch : 72
+Train Loss     : 7.3810	 | 	Train Accuracy     : 0.5561	 | 	Train AUC : 0.7127
+
+
+Pre-training Epoch : 73
+Train Loss     : 7.4764	 | 	Train Accuracy     : 0.5516	 | 	Train AUC : 0.7080
+
+
+Pre-training Epoch : 74
+Train Loss     : 7.3731	 | 	Train Accuracy     : 0.5599	 | 	Train AUC : 0.7158
+
+
+Pre-training Epoch : 75
+Train Loss     : 7.2892	 | 	Train Accuracy     : 0.5542	 | 	Train AUC : 0.7019
+
+
+Pre-training Epoch : 76
+Train Loss     : 7.2904	 | 	Train Accuracy     : 0.5403	 | 	Train AUC : 0.6988
+
+
+Pre-training Epoch : 77
+Train Loss     : 7.3272	 | 	Train Accuracy     : 0.5563	 | 	Train AUC : 0.7112
+
+
+Pre-training Epoch : 78
+Train Loss     : 7.3342	 | 	Train Accuracy     : 0.5459	 | 	Train AUC : 0.7181
+
+
+Pre-training Epoch : 79
+Train Loss     : 7.2914	 | 	Train Accuracy     : 0.5436	 | 	Train AUC : 0.7161
+
+
+Pre-training Epoch : 80
+Train Loss     : 7.3116	 | 	Train Accuracy     : 0.5563	 | 	Train AUC : 0.7175
+
+
+Pre-training Epoch : 81
+Train Loss     : 7.3219	 | 	Train Accuracy     : 0.5474	 | 	Train AUC : 0.7249
+
+
+Pre-training Epoch : 82
+Train Loss     : 7.3179	 | 	Train Accuracy     : 0.5588	 | 	Train AUC : 0.7184
+
+
+Pre-training Epoch : 83
+Train Loss     : 7.3274	 | 	Train Accuracy     : 0.5526	 | 	Train AUC : 0.7181
+
+
+Pre-training Epoch : 84
+Train Loss     : 7.2579	 | 	Train Accuracy     : 0.5560	 | 	Train AUC : 0.7233
+
+
+Pre-training Epoch : 85
+Train Loss     : 7.2433	 | 	Train Accuracy     : 0.5588	 | 	Train AUC : 0.7268
+
+
+Pre-training Epoch : 86
+Train Loss     : 7.2920	 | 	Train Accuracy     : 0.5542	 | 	Train AUC : 0.7240
+
+
+Pre-training Epoch : 87
+Train Loss     : 7.3461	 | 	Train Accuracy     : 0.5591	 | 	Train AUC : 0.7220
+
+
+Pre-training Epoch : 88
+Train Loss     : 7.3165	 | 	Train Accuracy     : 0.5568	 | 	Train AUC : 0.7201
+
+
+Pre-training Epoch : 89
+Train Loss     : 7.2828	 | 	Train Accuracy     : 0.5596	 | 	Train AUC : 0.7154
+
+
+Pre-training Epoch : 90
+Train Loss     : 7.3368	 | 	Train Accuracy     : 0.5567	 | 	Train AUC : 0.7186
+
+
+Pre-training Epoch : 91
+Train Loss     : 7.3947	 | 	Train Accuracy     : 0.5651	 | 	Train AUC : 0.7295
+
+
+Pre-training Epoch : 92
+Train Loss     : 7.3489	 | 	Train Accuracy     : 0.5562	 | 	Train AUC : 0.7186
+
+
+Pre-training Epoch : 93
+Train Loss     : 7.3546	 | 	Train Accuracy     : 0.5586	 | 	Train AUC : 0.7288
+
+
+Pre-training Epoch : 94
+Train Loss     : 7.3246	 | 	Train Accuracy     : 0.5594	 | 	Train AUC : 0.7313
+
+
+Pre-training Epoch : 95
+Train Loss     : 7.3674	 | 	Train Accuracy     : 0.5631	 | 	Train AUC : 0.7240
+
+
+Pre-training Epoch : 96
+Train Loss     : 7.3101	 | 	Train Accuracy     : 0.5544	 | 	Train AUC : 0.7261
+
+
+Pre-training Epoch : 97
+Train Loss     : 7.2865	 | 	Train Accuracy     : 0.5578	 | 	Train AUC : 0.7172
+
+
+Pre-training Epoch : 98
+Train Loss     : 7.1342	 | 	Train Accuracy     : 0.5601	 | 	Train AUC : 0.7266
+
+
+Pre-training Epoch : 99
+Train Loss     : 7.0255	 | 	Train Accuracy     : 0.5649	 | 	Train AUC : 0.7321
+
+
+Pre-training Epoch : 100
+Train Loss     : 6.9747	 | 	Train Accuracy     : 0.5653	 | 	Train AUC : 0.7347
+
+
+Pre-training Epoch : 101
+Train Loss     : 6.9443	 | 	Train Accuracy     : 0.5630	 | 	Train AUC : 0.7371
+
+
+Pre-training Epoch : 102
+Train Loss     : 6.9363	 | 	Train Accuracy     : 0.5624	 | 	Train AUC : 0.7385
+
+
+Pre-training Epoch : 103
+Train Loss     : 6.9207	 | 	Train Accuracy     : 0.5692	 | 	Train AUC : 0.7399
+
+
+Pre-training Epoch : 104
+Train Loss     : 6.9169	 | 	Train Accuracy     : 0.5696	 | 	Train AUC : 0.7412
+
+
+Pre-training Epoch : 105
+Train Loss     : 6.8946	 | 	Train Accuracy     : 0.5705	 | 	Train AUC : 0.7442
+
+
+Pre-training Epoch : 106
+Train Loss     : 6.8857	 | 	Train Accuracy     : 0.5659	 | 	Train AUC : 0.7429
+
+
+Pre-training Epoch : 107
+Train Loss     : 6.8855	 | 	Train Accuracy     : 0.5695	 | 	Train AUC : 0.7432
+
+
+Pre-training Epoch : 108
+Train Loss     : 6.8779	 | 	Train Accuracy     : 0.5737	 | 	Train AUC : 0.7452
+
+
+Pre-training Epoch : 109
+Train Loss     : 6.8671	 | 	Train Accuracy     : 0.5740	 | 	Train AUC : 0.7482
+
+
+Pre-training Epoch : 110
+Train Loss     : 6.8581	 | 	Train Accuracy     : 0.5711	 | 	Train AUC : 0.7503
+
+
+Pre-training Epoch : 111
+Train Loss     : 6.8581	 | 	Train Accuracy     : 0.5714	 | 	Train AUC : 0.7484
+
+
+Pre-training Epoch : 112
+Train Loss     : 6.8545	 | 	Train Accuracy     : 0.5744	 | 	Train AUC : 0.7503
+
+
+Pre-training Epoch : 113
+Train Loss     : 6.8377	 | 	Train Accuracy     : 0.5761	 | 	Train AUC : 0.7513
+
+
+Pre-training Epoch : 114
+Train Loss     : 6.8377	 | 	Train Accuracy     : 0.5733	 | 	Train AUC : 0.7538
+
+
+Pre-training Epoch : 115
+Train Loss     : 6.8363	 | 	Train Accuracy     : 0.5722	 | 	Train AUC : 0.7550
+
+
+Pre-training Epoch : 116
+Train Loss     : 6.8225	 | 	Train Accuracy     : 0.5786	 | 	Train AUC : 0.7543
+
+
+Pre-training Epoch : 117
+Train Loss     : 6.8197	 | 	Train Accuracy     : 0.5785	 | 	Train AUC : 0.7562
+
+
+Pre-training Epoch : 118
+Train Loss     : 6.8203	 | 	Train Accuracy     : 0.5772	 | 	Train AUC : 0.7585
+
+
+Pre-training Epoch : 119
+Train Loss     : 6.8169	 | 	Train Accuracy     : 0.5772	 | 	Train AUC : 0.7580
+
+
+Pre-training Epoch : 120
+Train Loss     : 6.8132	 | 	Train Accuracy     : 0.5800	 | 	Train AUC : 0.7581
+
+
+Pre-training Epoch : 121
+Train Loss     : 6.8020	 | 	Train Accuracy     : 0.5805	 | 	Train AUC : 0.7583
+
+
+Pre-training Epoch : 122
+Train Loss     : 6.7964	 | 	Train Accuracy     : 0.5777	 | 	Train AUC : 0.7632
+
+
+Pre-training Epoch : 123
+Train Loss     : 6.7914	 | 	Train Accuracy     : 0.5754	 | 	Train AUC : 0.7638
+
+
+Pre-training Epoch : 124
+Train Loss     : 6.7917	 | 	Train Accuracy     : 0.5813	 | 	Train AUC : 0.7620
+
+
+Pre-training Epoch : 125
+Train Loss     : 6.7973	 | 	Train Accuracy     : 0.5821	 | 	Train AUC : 0.7629
+
+
+Pre-training Epoch : 126
+Train Loss     : 6.7891	 | 	Train Accuracy     : 0.5759	 | 	Train AUC : 0.7677
+
+
+Pre-training Epoch : 127
+Train Loss     : 6.7733	 | 	Train Accuracy     : 0.5786	 | 	Train AUC : 0.7659
+
+
+Pre-training Epoch : 128
+Train Loss     : 6.7674	 | 	Train Accuracy     : 0.5841	 | 	Train AUC : 0.7642
+
+
+Pre-training Epoch : 129
+Train Loss     : 6.7679	 | 	Train Accuracy     : 0.5853	 | 	Train AUC : 0.7673
+
+
+Pre-training Epoch : 130
+Train Loss     : 6.7634	 | 	Train Accuracy     : 0.5749	 | 	Train AUC : 0.7675
+
+
+Pre-training Epoch : 131
+Train Loss     : 6.7632	 | 	Train Accuracy     : 0.5817	 | 	Train AUC : 0.7681
+
+
+Pre-training Epoch : 132
+Train Loss     : 6.7581	 | 	Train Accuracy     : 0.5857	 | 	Train AUC : 0.7648
+
+
+Pre-training Epoch : 133
+Train Loss     : 6.7590	 | 	Train Accuracy     : 0.5817	 | 	Train AUC : 0.7677
+
+
+Pre-training Epoch : 134
+Train Loss     : 6.7491	 | 	Train Accuracy     : 0.5808	 | 	Train AUC : 0.7716
+
+
+Pre-training Epoch : 135
+Train Loss     : 6.7542	 | 	Train Accuracy     : 0.5786	 | 	Train AUC : 0.7649
+
+
+Pre-training Epoch : 136
+Train Loss     : 6.7518	 | 	Train Accuracy     : 0.5830	 | 	Train AUC : 0.7669
+
+
+Pre-training Epoch : 137
+Train Loss     : 6.7398	 | 	Train Accuracy     : 0.5759	 | 	Train AUC : 0.7677
+
+
+Pre-training Epoch : 138
+Train Loss     : 6.7455	 | 	Train Accuracy     : 0.5778	 | 	Train AUC : 0.7635
+
+
+Pre-training Epoch : 139
+Train Loss     : 6.7389	 | 	Train Accuracy     : 0.5789	 | 	Train AUC : 0.7728
+
+
+Pre-training Epoch : 140
+Train Loss     : 6.7410	 | 	Train Accuracy     : 0.5796	 | 	Train AUC : 0.7627
+
+
+Pre-training Epoch : 141
+Train Loss     : 6.7442	 | 	Train Accuracy     : 0.5767	 | 	Train AUC : 0.7681
+
+
+Pre-training Epoch : 142
+Train Loss     : 6.7251	 | 	Train Accuracy     : 0.5770	 | 	Train AUC : 0.7667
+
+
+Pre-training Epoch : 143
+Train Loss     : 6.7255	 | 	Train Accuracy     : 0.5822	 | 	Train AUC : 0.7744
+
+
+Pre-training Epoch : 144
+Train Loss     : 6.7220	 | 	Train Accuracy     : 0.5822	 | 	Train AUC : 0.7705
+
+
+Pre-training Epoch : 145
+Train Loss     : 6.7169	 | 	Train Accuracy     : 0.5831	 | 	Train AUC : 0.7761
+
+
+Pre-training Epoch : 146
+Train Loss     : 6.7118	 | 	Train Accuracy     : 0.5842	 | 	Train AUC : 0.7720
+
+
+Pre-training Epoch : 147
+Train Loss     : 6.7085	 | 	Train Accuracy     : 0.5860	 | 	Train AUC : 0.7811
+
+
+Pre-training Epoch : 148
+Train Loss     : 6.7126	 | 	Train Accuracy     : 0.5839	 | 	Train AUC : 0.7788
+
+
+Pre-training Epoch : 149
+Train Loss     : 6.7019	 | 	Train Accuracy     : 0.5952	 | 	Train AUC : 0.7812
+
+
+Pre-training Epoch : 150
+Train Loss     : 6.7062	 | 	Train Accuracy     : 0.5922	 | 	Train AUC : 0.7799
+
+
+Pre-training Epoch : 151
+Train Loss     : 6.7011	 | 	Train Accuracy     : 0.5862	 | 	Train AUC : 0.7839
+
+
+Pre-training Epoch : 152
+Train Loss     : 6.6930	 | 	Train Accuracy     : 0.5913	 | 	Train AUC : 0.7838
+
+
+Pre-training Epoch : 153
+Train Loss     : 6.6938	 | 	Train Accuracy     : 0.6004	 | 	Train AUC : 0.7856
+
+
+Pre-training Epoch : 154
+Train Loss     : 6.7001	 | 	Train Accuracy     : 0.5944	 | 	Train AUC : 0.7830
+
+
+Pre-training Epoch : 155
+Train Loss     : 6.6943	 | 	Train Accuracy     : 0.5878	 | 	Train AUC : 0.7895
+
+
+Pre-training Epoch : 156
+Train Loss     : 6.6898	 | 	Train Accuracy     : 0.5951	 | 	Train AUC : 0.7877
+
+
+Pre-training Epoch : 157
+Train Loss     : 6.6922	 | 	Train Accuracy     : 0.5991	 | 	Train AUC : 0.7891
+
+
+Pre-training Epoch : 158
+Train Loss     : 6.6942	 | 	Train Accuracy     : 0.5887	 | 	Train AUC : 0.7881
+
+
+Pre-training Epoch : 159
+Train Loss     : 6.6781	 | 	Train Accuracy     : 0.5913	 | 	Train AUC : 0.7941
+
+
+Pre-training Epoch : 160
+Train Loss     : 6.6855	 | 	Train Accuracy     : 0.6003	 | 	Train AUC : 0.7910
+
+
+Pre-training Epoch : 161
+Train Loss     : 6.6834	 | 	Train Accuracy     : 0.5989	 | 	Train AUC : 0.7913
+
+
+Pre-training Epoch : 162
+Train Loss     : 6.6936	 | 	Train Accuracy     : 0.5931	 | 	Train AUC : 0.7916
+
+
+Pre-training Epoch : 163
+Train Loss     : 6.6777	 | 	Train Accuracy     : 0.5962	 | 	Train AUC : 0.7970
+
+
+Pre-training Epoch : 164
+Train Loss     : 6.6740	 | 	Train Accuracy     : 0.6029	 | 	Train AUC : 0.7947
+
+
+Pre-training Epoch : 165
+Train Loss     : 6.6759	 | 	Train Accuracy     : 0.5972	 | 	Train AUC : 0.7978
+
+
+Pre-training Epoch : 166
+Train Loss     : 6.6695	 | 	Train Accuracy     : 0.5957	 | 	Train AUC : 0.7948
+
+
+Pre-training Epoch : 167
+Train Loss     : 6.6792	 | 	Train Accuracy     : 0.6006	 | 	Train AUC : 0.8005
+
+
+Pre-training Epoch : 168
+Train Loss     : 6.6662	 | 	Train Accuracy     : 0.6047	 | 	Train AUC : 0.7975
+
+
+Pre-training Epoch : 169
+Train Loss     : 6.6743	 | 	Train Accuracy     : 0.5923	 | 	Train AUC : 0.7970
+
+
+Pre-training Epoch : 170
+Train Loss     : 6.6620	 | 	Train Accuracy     : 0.6050	 | 	Train AUC : 0.7995
+
+
+Pre-training Epoch : 171
+Train Loss     : 6.6694	 | 	Train Accuracy     : 0.5962	 | 	Train AUC : 0.7965
+
+
+Pre-training Epoch : 172
+Train Loss     : 6.6626	 | 	Train Accuracy     : 0.6010	 | 	Train AUC : 0.8053
+
+
+Pre-training Epoch : 173
+Train Loss     : 6.6627	 | 	Train Accuracy     : 0.5947	 | 	Train AUC : 0.7975
+
+
+Pre-training Epoch : 174
+Train Loss     : 6.6607	 | 	Train Accuracy     : 0.6107	 | 	Train AUC : 0.8025
+
+
+Pre-training Epoch : 175
+Train Loss     : 6.6599	 | 	Train Accuracy     : 0.6029	 | 	Train AUC : 0.8013
+
+
+Pre-training Epoch : 176
+Train Loss     : 6.6583	 | 	Train Accuracy     : 0.6009	 | 	Train AUC : 0.8049
+
+
+Pre-training Epoch : 177
+Train Loss     : 6.6529	 | 	Train Accuracy     : 0.5974	 | 	Train AUC : 0.8055
+
+
+Pre-training Epoch : 178
+Train Loss     : 6.6559	 | 	Train Accuracy     : 0.6036	 | 	Train AUC : 0.7976
+
+
+Pre-training Epoch : 179
+Train Loss     : 6.6476	 | 	Train Accuracy     : 0.6105	 | 	Train AUC : 0.8076
+
+
+Pre-training Epoch : 180
+Train Loss     : 6.6616	 | 	Train Accuracy     : 0.5985	 | 	Train AUC : 0.8025
+
+
+Pre-training Epoch : 181
+Train Loss     : 6.6584	 | 	Train Accuracy     : 0.5972	 | 	Train AUC : 0.8101
+
+
+Pre-training Epoch : 182
+Train Loss     : 6.6434	 | 	Train Accuracy     : 0.6024	 | 	Train AUC : 0.8018
+
+
+Pre-training Epoch : 183
+Train Loss     : 6.6541	 | 	Train Accuracy     : 0.6038	 | 	Train AUC : 0.8072
+
+
+Pre-training Epoch : 184
+Train Loss     : 6.6536	 | 	Train Accuracy     : 0.6066	 | 	Train AUC : 0.8077
+
+
+Pre-training Epoch : 185
+Train Loss     : 6.6479	 | 	Train Accuracy     : 0.5958	 | 	Train AUC : 0.8123
+
+
+Pre-training Epoch : 186
+Train Loss     : 6.6419	 | 	Train Accuracy     : 0.6104	 | 	Train AUC : 0.8092
+
+
+Pre-training Epoch : 187
+Train Loss     : 6.6429	 | 	Train Accuracy     : 0.6080	 | 	Train AUC : 0.8105
+
+
+Pre-training Epoch : 188
+Train Loss     : 6.6440	 | 	Train Accuracy     : 0.6128	 | 	Train AUC : 0.8109
+
+
+Pre-training Epoch : 189
+Train Loss     : 6.6372	 | 	Train Accuracy     : 0.5980	 | 	Train AUC : 0.8123
+
+
+Pre-training Epoch : 190
+Train Loss     : 6.6339	 | 	Train Accuracy     : 0.6127	 | 	Train AUC : 0.8140
+
+
+Pre-training Epoch : 191
+Train Loss     : 6.6431	 | 	Train Accuracy     : 0.6142	 | 	Train AUC : 0.8077
+
+
+Pre-training Epoch : 192
+Train Loss     : 6.6358	 | 	Train Accuracy     : 0.6196	 | 	Train AUC : 0.8173
+
+
+Pre-training Epoch : 193
+Train Loss     : 6.6436	 | 	Train Accuracy     : 0.6001	 | 	Train AUC : 0.8131
+
+
+Pre-training Epoch : 194
+Train Loss     : 6.6333	 | 	Train Accuracy     : 0.6199	 | 	Train AUC : 0.8212
+
+
+Pre-training Epoch : 195
+Train Loss     : 6.6338	 | 	Train Accuracy     : 0.6136	 | 	Train AUC : 0.8117
+
+
+Pre-training Epoch : 196
+Train Loss     : 6.6311	 | 	Train Accuracy     : 0.6171	 | 	Train AUC : 0.8192
+
+
+Pre-training Epoch : 197
+Train Loss     : 6.6419	 | 	Train Accuracy     : 0.6038	 | 	Train AUC : 0.8158
+
+
+Pre-training Epoch : 198
+Train Loss     : 6.6166	 | 	Train Accuracy     : 0.6152	 | 	Train AUC : 0.8202
+
+
+Pre-training Epoch : 199
+Train Loss     : 6.6325	 | 	Train Accuracy     : 0.6174	 | 	Train AUC : 0.8120
+
+
+Pre-training Epoch : 200
+Train Loss     : 6.6198	 | 	Train Accuracy     : 0.6196	 | 	Train AUC : 0.8211
+
+
+################## Training is Done! #########################
+Training time is : 0:02:29.296028

@@ -1,0 +1,8 @@
+=============================================
+Pre-training Dataset: SleepEEG
+Target (fine-tuning) Dataset: Epilepsy
+Method:  TF-C
+Mode:    pre_train
+=============================================
+Data loaded ...
+Training started ....
