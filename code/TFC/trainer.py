@@ -6,7 +6,7 @@ from loss import *
 from sklearn.metrics import roc_auc_score, classification_report, confusion_matrix, \
     average_precision_score, accuracy_score, precision_score,f1_score,recall_score
 from sklearn.neighbors import KNeighborsClassifier
-from model import * #NTXentLoss, NTXentLoss_poly
+from model import * 
 
 def one_hot_encoding(X):
     X = [int(x) for x in X]
