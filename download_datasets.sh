@@ -1,5 +1,5 @@
 wget -O SleepEEG.zip https://figshare.com/ndownloader/articles/19930178/versions/1
-wget -O Epilepsy.zip https://figshare.com/ndownloader/articles/19930199/versions/1
+wget -O Epilepsy.zip https://figshare.com/ndownloader/articles/19930199/versions/2
 wget -O FD-A.zip https://figshare.com/ndownloader/articles/19930205/versions/1
 wget -O FD-B.zip https://figshare.com/ndownloader/articles/19930226/versions/1
 wget -O HAR.zip https://figshare.com/ndownloader/articles/19930244/versions/1
