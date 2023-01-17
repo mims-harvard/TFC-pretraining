@@ -86,7 +86,18 @@ The second step consists of converting, for each dataset, from the three .pt fil
 <!-- The pre-processing scripts are available upon reasonable request. -->
 
 **Step one** 
-The processed datasets can be manually downloaded at the following links. Then you have to place the files inside the corresponding folder under `data/dataset_name` (such as `data/SleepEEG`):
+The processed datasets can be manually downloaded at the following links. 
+
+- wget -O SleepEEG.zip https://figshare.com/ndownloader/articles/19930178/versions/1
+- wget -O Epilepsy.zip https://figshare.com/ndownloader/articles/19930199/versions/2 
+- wget -O FD-A.zip https://figshare.com/ndownloader/articles/19930205/versions/1
+- wget -O FD-B.zip https://figshare.com/ndownloader/articles/19930226/versions/1
+- wget -O HAR.zip https://figshare.com/ndownloader/articles/19930244/versions/1
+- wget -O Gesture.zip https://figshare.com/ndownloader/articles/19930247/versions/1
+- wget -O ECG.zip https://figshare.com/ndownloader/articles/19930253/versions/1
+- wget -O EMG.zip https://figshare.com/ndownloader/articles/19930250/versions/1
+
+Then you have to place the files inside the corresponding folder under `data/dataset_name` (such as `data/SleepEEG`):
 
 **The well-processed datasets will be released (in FigShare) after acceptance. **
 
@@ -148,6 +159,10 @@ year      = {2022}
 }
 ```
 ````
+
+## Updates on Jan 16, 2023
+
+We updated the implementation the proposed TF-C model: 1) fixed buggs, cleaned the codes, added comments for better understanding; 2) for the contrastive encoders (in both time and frequency doamins), replaced the CNN blocks by 2 layer of Transformer; 3) for downstream classifier, added a KNN classifier in paral with the original MLP (2 layer) classifier. 4) provided an example of pre-trained model (the model is pretrained on a subset of SleepEEG). 
 
 ## Miscellaneous
 
