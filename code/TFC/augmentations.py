@@ -47,13 +47,7 @@ def DataTransform_FD(sample, config):
     """Weak and strong augmentations in Frequency domain """
     aug_1 = remove_frequency(sample, pertub_ratio=0.1)
     aug_2 = add_frequency(sample, pertub_ratio=0.1)
-    # generate random sequence
-    li = np.random.randint(0, 2, size=[sample.shape[0]]) # there are two augmentations in Frequency domain
-    li_onehot = one_hot_encoding(li)
-    aug_1[1-li_onehot[:, 0]] = 0 # the rows are not selected are set as zero.
-    aug_2[1 - li_onehot[:, 1]] = 0
     aug_F = aug_1 + aug_2
-    # aug_F = aug_1
     return aug_F
 
 def remove_frequency(x, pertub_ratio=0.0):
