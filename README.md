@@ -160,9 +160,15 @@ year      = {2022}
 ```
 ````
 
-## Updates on Jan 16, 2023
+## Updates on Jan 2023
 
-We updated the implementation the proposed TF-C model: 1) fixed buggs, cleaned the codes, added comments for better understanding; 2) for the contrastive encoders (in both time and frequency doamins), replaced the CNN blocks by 2 layer of Transformer; 3) for downstream classifier, added a KNN classifier in paral with the original MLP (2 layer) classifier. 4) provided an example of pre-trained model (the model is pretrained on a subset of SleepEEG). 
+We updated the implementation the proposed TF-C model on the following aspects.
+
+1. Fixed bugs, cleaned the codes, and added comments for better understanding. The newly uploaded TF-C code is at path `TFC-pretraining/code/TFC`. All the necessary files to run it are provided in the folder. 
+2. For the contrastive encoders (in both time and frequency domains), we replaced the 3 layers of CNN blocks with 2 layers of Transformer. We noticed that the performance is not improved (even with a slight decrease) but the stability is getting better. 
+3. For the downstream classifier, we added a KNN classifier in parallel with the original MLP (2-layer) classifier. In preliminary experiments, we noticed that the performance of MLP varies across different setups and hyper-parameter settings. Thus, in this version, we provide two classifiers: 2-layer MLP and KNN (K=5). However, the reasons hidden behind the performance variance are still unknown, which needs further studies. 
+4. For better reproducement, we hereby provided an example of pre-trained model. The model weights can be found in path `TFC-pretraining/code/experiments_logs/SleepEEG_2_Epilepsy/run1/pre_train_seed_42_2layertransformer/saved_models/ckp_last.pt`. The model path is identical to the one used in code, so you may clone/download this whole repo and directly run the 'TFC-pretraining/code/TFC/main.py' file. This model is pretrained on the scenario: SleepEEG to Epilepsy (in this udate, all the debugs are based on this setup). In specific, setting the training_mode as `pre_train` and pretrain_dataset as `SleepEEG`. In SleepEEG_Configs.py, all the hyper-parameters are unchanged, in specific, lr=0.0005, epoch number as 200 (200 for pretraining while 20 for finetuning). We set the random seed as 42. Please note, for quick debugging, the model is pretrained on a subset of SleepEEG (1280 samples which is only <1% of the whole dataset). Thus, we believe there's a large space to further boost the performance with more pretraining samples.
+5.
 
 ## Miscellaneous
 
