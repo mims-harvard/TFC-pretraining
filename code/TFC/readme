@@ -1,0 +1,13 @@
+This is an updated version of the proposed TF-C model. 
+
+1. Fixed buggs
+
+2. Replaced the CNN blocks with 2-layer transformer as the encoder architecture
+
+3. Cleaned the codes and added comments for easy understanding
+
+4. Uploaded the weights of an exampled pretrained model. The model is pretrained on SleepEEG with only 1280 samples (a small subset that only takes ~1% samples of the whole dataset). 
+
+5. For the downstream classifier, added a KNN classifier as an alternation of the MLP classifier. 
+
+6. Will share some ideas of how to further improve the TFC model. 
