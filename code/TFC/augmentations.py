@@ -27,38 +27,27 @@ def DataTransform(sample, config):
 #     strong_aug = add_frequency(sample, 0.1)
 #     return weak_aug, strong_aug
 def DataTransform_TD(sample, config):
-    """Simplely use the jittering augmentation. Feel free to add more autmentations you want, 
+    """Simplely use the jittering augmentation. Feel free to add more autmentations you want,
     but we noticed that in TF-C framework, the augmentation has litter impact on the final tranfering performance."""
-    # aug_1 = masking(sample, keepratio=0.9)
-    aug_1 = jitter(sample, config.augmentation.jitter_ratio)
-    # aug_1 = scaling(sample, config.augmentation.jitter_scale_ratio)
-    # aug_3 = permutation(sample, max_segments=config.augmentation.max_seg)
+    aug = jitter(sample, config.augmentation.jitter_ratio)
+    return aug
 
-#     li = np.random.randint(0, 4, size=[sample.shape[0]]) # there are two augmentations in Frequency domain
-#     li_onehot = one_hot_encoding(li)
-#     aug_1[1-li_onehot[:, 0]] = 0 # the rows are not selected are set as zero.
-    # aug_2[1 - li_onehot[:, 1]] = 0
-    # aug_3[1 - li_onehot[:, 2]] = 0
-    # aug_4[1 - li_onehot[:, 3]] = 0
-    aug_T = aug_1 # + aug_2 + aug_3 #+aug_4
-    return aug_T
 
 def DataTransform_TD_bank(sample, config):
-    """Augmentation bank that includes four augmentations and randomly select one as the positive sample. 
+    """Augmentation bank that includes four augmentations and randomly select one as the positive sample.
     You may use this one the replace the above DataTransform_TD function."""
-    
     aug_1 = jitter(sample, config.augmentation.jitter_ratio)
-    aug_1 = scaling(sample, config.augmentation.jitter_scale_ratio)
+    aug_2 = scaling(sample, config.augmentation.jitter_scale_ratio)
     aug_3 = permutation(sample, max_segments=config.augmentation.max_seg)
     aug_4 = masking(sample, keepratio=0.9)
 
-    li = np.random.randint(0, 4, size=[sample.shape[0]]) 
+    li = np.random.randint(0, 4, size=[sample.shape[0]])
     li_onehot = one_hot_encoding(li)
-    aug_1[1-li_onehot[:, 0]] = 0 # the rows that are not selected are set as zero.
-    aug_2[1 - li_onehot[:, 1]] = 0
-    aug_3[1 - li_onehot[:, 2]] = 0
-    aug_4[1 - li_onehot[:, 3]] = 0
-    aug_T = aug_1 + aug_2 + aug_3 +aug_4
+    aug_1 = aug_1 * li_onehot[:, 0][:, None, None]  # the rows that are not selected are set as zero.
+    aug_2 = aug_2 * li_onehot[:, 0][:, None, None]
+    aug_3 = aug_3 * li_onehot[:, 0][:, None, None]
+    aug_4 = aug_4 * li_onehot[:, 0][:, None, None]
+    aug_T = aug_1 + aug_2 + aug_3 + aug_4
     return aug_T
 
 def DataTransform_FD(sample, config):
