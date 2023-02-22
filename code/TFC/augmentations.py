@@ -43,6 +43,23 @@ def DataTransform_TD(sample, config):
     aug_T = aug_1 # + aug_2 + aug_3 #+aug_4
     return aug_T
 
+def DataTransform_TD_bank(sample, config):
+    """Augmentation bank that includes four augmentations and randomly select one as the positive sample. 
+    You may use this one the replace the above DataTransform_TD function."""
+    
+    aug_1 = jitter(sample, config.augmentation.jitter_ratio)
+    aug_1 = scaling(sample, config.augmentation.jitter_scale_ratio)
+    aug_3 = permutation(sample, max_segments=config.augmentation.max_seg)
+    aug_4 = masking(sample, keepratio=0.9)
+
+    li = np.random.randint(0, 4, size=[sample.shape[0]]) 
+    li_onehot = one_hot_encoding(li)
+    aug_1[1-li_onehot[:, 0]] = 0 # the rows that are not selected are set as zero.
+    aug_2[1 - li_onehot[:, 1]] = 0
+    aug_3[1 - li_onehot[:, 2]] = 0
+    aug_4[1 - li_onehot[:, 3]] = 0
+    aug_T = aug_1 + aug_2 + aug_3 +aug_4
+    return aug_T
 
 def DataTransform_FD(sample, config):
     """Weak and strong augmentations in Frequency domain """
